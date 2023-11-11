@@ -8,12 +8,10 @@ volume <- function(r, rho) {
 
 # Function to compute the volumes of the spheres with radius r, r^2 and r^3
 volume_vector <- function(r) {
-  r <- 22
-  for (r in 2:4){
-    volume(r)
-  }
+  c(volume(r), volume(r^2), volume(r^3))
 }
 
 # Run volume_vector(r) and print the volumes of the spheres with
 # radius r, r^2 and r^3
-volume_vector(r)
+volumes <- volume_vector(r)
+print(volumes)
